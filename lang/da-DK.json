@@ -76,6 +76,7 @@
   "message.new-version-available": "Ny udgave af Bayo.analytics {version} er tilgængelig!",
   "message.no-data-available": "Ingen data tilgængelig.",
   "message.no-websites-configured": "Du har ikke konfigureret nogen websteder.",
+  "message.not-admin": "Du har ikke adgang til denne funktion, kontakt me@bayo.se for mere information",
   "message.page-not-found": "Side ikke fundet.",
   "message.powered-by": "Drevet af {name}",
   "message.reset-warning": "All statistics for this website will be deleted, but your tracking code will remain intact.",

@@ -20,6 +20,7 @@ import Pen from 'assets/pen.svg';
 import Trash from 'assets/trash.svg';
 import Reset from 'assets/redo.svg';
 import Plus from 'assets/plus.svg';
+import Cancel from 'assets/xmark.svg';
 import Code from 'assets/code.svg';
 import LinkIcon from 'assets/link.svg';
 import useFetch from 'hooks/useFetch';
@@ -49,15 +50,17 @@ export default function WebsiteSettings() {
           onClick={() => setShowUrl(row)}
         />
       )}
-      <Button
-        icon={<Code />}
-        size="small"
-        tooltip={
-          <FormattedMessage id="message.get-tracking-code" defaultMessage="Get tracking code" />
-        }
-        tooltipId={`button-code-${row.website_id}`}
-        onClick={() => setShowCode(row)}
-      />
+      {user.is_admin && (
+        <Button
+          icon={<Code />}
+          size="small"
+          tooltip={
+            <FormattedMessage id="message.get-tracking-code" defaultMessage="Get tracking code" />
+          }
+          tooltipId={`button-code-${row.website_id}`}
+          onClick={() => setShowCode(row)}
+        />
+      )}
       <Button
         icon={<Pen />}
         size="small"
@@ -176,6 +179,17 @@ export default function WebsiteSettings() {
     </EmptyPlaceholder>
   );
 
+  const NotAdmin = () => (
+    <>
+      <FormattedMessage
+        id="message.not-admin"
+        defaultMessage="You do not have acess to that.Contact me@bayo for more information."
+      />
+      <Button icon={<Cancel />} size="small" onClick={() => setAddWebsite(false)}>
+        <FormattedMessage id="label.cancel" defaultMessage="Cancel" />
+      </Button>
+    </>
+  );
   return (
     <>
       <PageHeader>
@@ -192,9 +206,14 @@ export default function WebsiteSettings() {
           <WebsiteEditForm values={editWebsite} onSave={handleSave} onClose={handleClose} />
         </Modal>
       )}
+
       {addWebsite && (
         <Modal title={<FormattedMessage id="label.add-website" defaultMessage="Add website" />}>
-          <WebsiteEditForm onSave={handleSave} onClose={handleClose} />
+          {user.is_admin ? (
+            <WebsiteEditForm onSave={handleSave} onClose={handleClose} />
+          ) : (
+            <NotAdmin />
+          )}
         </Modal>
       )}
       {resetWebsite && (
@@ -202,7 +221,11 @@ export default function WebsiteSettings() {
           title={<FormattedMessage id="label.reset-website" defaultMessage="Reset statistics" />}
         >
           <ResetForm
-            values={{ type: 'website', id: resetWebsite.website_id, name: resetWebsite.name }}
+            values={{
+              type: 'website',
+              id: resetWebsite.website_id,
+              name: resetWebsite.name,
+            }}
             onSave={handleSave}
             onClose={handleClose}
           />
@@ -213,13 +236,17 @@ export default function WebsiteSettings() {
           title={<FormattedMessage id="label.delete-website" defaultMessage="Delete website" />}
         >
           <DeleteForm
-            values={{ type: 'website', id: deleteWebsite.website_id, name: deleteWebsite.name }}
+            values={{
+              type: 'website',
+              id: deleteWebsite.website_id,
+              name: deleteWebsite.name,
+            }}
             onSave={handleSave}
             onClose={handleClose}
           />
         </Modal>
       )}
-      {showCode && (
+      {showCode && user.is_admin && (
         <Modal title={<FormattedMessage id="label.tracking-code" defaultMessage="Tracking code" />}>
           <TrackingCodeForm values={showCode} onClose={handleClose} />
         </Modal>

@@ -18,7 +18,10 @@ export default function DashboardSettingsButton() {
 
   function handleSelect(value) {
     if (value === 'charts') {
-      setDashboard({ ...defaultDashboardConfig, showCharts: !settings.showCharts });
+      setDashboard({
+        ...defaultDashboardConfig,
+        showCharts: !settings.showCharts,
+      });
     }
     //setDashboard(value);
   }

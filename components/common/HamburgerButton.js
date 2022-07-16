@@ -11,13 +11,22 @@ const menuItems = [
     label: <FormattedMessage id="label.dashboard" defaultMessage="Dashboard" />,
     value: '/dashboard',
   },
-  { label: <FormattedMessage id="label.realtime" defaultMessage="Realtime" />, value: '/realtime' },
-  { label: <FormattedMessage id="label.settings" defaultMessage="Settings" />, value: '/settings' },
+  {
+    label: <FormattedMessage id="label.realtime" defaultMessage="Realtime" />,
+    value: '/realtime',
+  },
+  {
+    label: <FormattedMessage id="label.settings" defaultMessage="Settings" />,
+    value: '/settings',
+  },
   {
     label: <FormattedMessage id="label.profile" defaultMessage="Profile" />,
     value: '/settings/profile',
   },
-  { label: <FormattedMessage id="label.logout" defaultMessage="Logout" />, value: '/logout' },
+  {
+    label: <FormattedMessage id="label.logout" defaultMessage="Logout" />,
+    value: '/logout',
+  },
 ];
 
 export default function HamburgerButton() {

@@ -21,7 +21,10 @@ export default function ReferrersTable({ websiteId, websiteDomain, showFilters, 
       label: <FormattedMessage id="metrics.filter.combined" defaultMessage="Combined" />,
       value: FILTER_COMBINED,
     },
-    { label: <FormattedMessage id="metrics.filter.raw" defaultMessage="Raw" />, value: FILTER_RAW },
+    {
+      label: <FormattedMessage id="metrics.filter.raw" defaultMessage="Raw" />,
+      value: FILTER_RAW,
+    },
   ];
 
   const renderLink = ({ w: link, x: referrer }) => {

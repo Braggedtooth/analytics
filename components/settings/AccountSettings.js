@@ -121,7 +121,11 @@ export default function AccountSettings() {
           title={<FormattedMessage id="label.delete-account" defaultMessage="Delete account" />}
         >
           <DeleteForm
-            values={{ type: 'account', id: deleteAccount.user_id, name: deleteAccount.username }}
+            values={{
+              type: 'account',
+              id: deleteAccount.user_id,
+              name: deleteAccount.username,
+            }}
             onSave={handleSave}
             onClose={handleClose}
           />

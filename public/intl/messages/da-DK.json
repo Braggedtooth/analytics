@@ -538,7 +538,7 @@
   "message.new-version-available": [
     {
       "type": 0,
-      "value": "Ny udgave af Umami "
+      "value": "Ny udgave af Bayo.analytics "
     },
     {
       "type": 1,
@@ -559,6 +559,12 @@
     {
       "type": 0,
       "value": "Du har ikke konfigureret nogen websteder."
+    }
+  ],
+  "message.not-admin": [
+    {
+      "type": 0,
+      "value": "Du har ikke adgang til denne funktion, kontakt me@bayo.se for mere information"
     }
   ],
   "message.page-not-found": [

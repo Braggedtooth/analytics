@@ -9,7 +9,10 @@ import { languages } from '../../lib/lang';
 
 export default function LanguageSetting() {
   const { locale, saveLocale } = useLocale();
-  const options = Object.keys(languages).map(key => ({ ...languages[key], value: key }));
+  const options = Object.keys(languages).map(key => ({
+    ...languages[key],
+    value: key,
+  }));
 
   function handleReset() {
     saveLocale(DEFAULT_LOCALE);

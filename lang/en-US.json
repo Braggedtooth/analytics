@@ -76,6 +76,7 @@
   "message.new-version-available": "A new version of the app {version} is available!",
   "message.no-data-available": "No data available.",
   "message.no-websites-configured": "You don't have any websites configured.",
+  "message.not-admin": "You do not have acess to that.Contact me@bayo for more information.",
   "message.page-not-found": "Page not found.",
   "message.powered-by": "Powered by {name}",
   "message.reset-warning": "All statistics for this website will be deleted, but your tracking code will remain intact.",

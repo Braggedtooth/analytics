@@ -72,7 +72,10 @@ export default function WebsiteChart({
     if (value === 'all') {
       const { data, ok } = await get(`/website/${websiteId}`);
       if (ok) {
-        setDateRange({ value, ...getDateRangeValues(new Date(data.created_at), Date.now()) });
+        setDateRange({
+          value,
+          ...getDateRangeValues(new Date(data.created_at), Date.now()),
+        });
       }
     } else {
       setDateRange(value);

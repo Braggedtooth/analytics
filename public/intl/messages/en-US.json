@@ -538,7 +538,7 @@
   "message.new-version-available": [
     {
       "type": 0,
-      "value": "A new version of umami "
+      "value": "A new version of the app "
     },
     {
       "type": 1,
@@ -559,6 +559,12 @@
     {
       "type": 0,
       "value": "You don't have any websites configured."
+    }
+  ],
+  "message.not-admin": [
+    {
+      "type": 0,
+      "value": "You do not have acess to that.Contact me@bayo for more information."
     }
   ],
   "message.page-not-found": [

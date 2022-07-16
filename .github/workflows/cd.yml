@@ -3,7 +3,6 @@ name: Create docker images
 on: [create]
 
 jobs:
-
   build:
     name: Build, push, and deploy
     if: ${{ startsWith(github.ref, 'refs/tags/v') }}

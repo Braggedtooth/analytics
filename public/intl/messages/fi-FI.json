@@ -538,7 +538,7 @@
   "message.new-version-available": [
     {
       "type": 0,
-      "value": "Uusi versio umamista "
+      "value": "Uusi versio Bayo.analytics "
     },
     {
       "type": 1,
@@ -559,6 +559,12 @@
     {
       "type": 0,
       "value": "Sinulla ei ole määritettyjä verkkosivustoja."
+    }
+  ],
+  "message.not-admin": [
+    {
+      "type": 0,
+      "value": "Sinulla ei ole pääsyä tähän toimintoon, ota yhteyttä me@bayo.se saadaksesi lisätietoja."
     }
   ],
   "message.page-not-found": [

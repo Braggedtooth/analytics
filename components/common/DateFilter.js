@@ -11,7 +11,10 @@ import Calendar from 'assets/calendar-alt.svg';
 import Icon from './Icon';
 
 export const filterOptions = [
-  { label: <FormattedMessage id="label.today" defaultMessage="Today" />, value: '1day' },
+  {
+    label: <FormattedMessage id="label.today" defaultMessage="Today" />,
+    value: '1day',
+  },
   {
     label: (
       <FormattedMessage id="label.last-hours" defaultMessage="Last {x} hours" values={{ x: 24 }} />
@@ -46,7 +49,10 @@ export const filterOptions = [
     ),
     value: '90day',
   },
-  { label: <FormattedMessage id="label.this-year" defaultMessage="This year" />, value: '1year' },
+  {
+    label: <FormattedMessage id="label.this-year" defaultMessage="This year" />,
+    value: '1year',
+  },
   {
     label: <FormattedMessage id="label.all-time" defaultMessage="All time" />,
     value: 'all',

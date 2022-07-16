@@ -27,7 +27,10 @@ export default function TestConsole() {
     return null;
   }
 
-  const options = data.map(({ name, website_id }) => ({ label: name, value: website_id }));
+  const options = data.map(({ name, website_id }) => ({
+    label: name,
+    value: website_id,
+  }));
   const selectedValue = options.find(({ value }) => value === website?.website_id)?.value;
 
   function handleSelect(value) {

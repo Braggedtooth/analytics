@@ -16,7 +16,10 @@ export default function PagesTable({ websiteId, websiteDomain, showFilters, ...p
       label: <FormattedMessage id="metrics.filter.combined" defaultMessage="Combined" />,
       value: FILTER_COMBINED,
     },
-    { label: <FormattedMessage id="metrics.filter.raw" defaultMessage="Raw" />, value: FILTER_RAW },
+    {
+      label: <FormattedMessage id="metrics.filter.raw" defaultMessage="Raw" />,
+      value: FILTER_RAW,
+    },
   ];
 
   const renderLink = ({ x: url }) => {
