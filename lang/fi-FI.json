@@ -73,7 +73,7 @@
   "message.go-to-settings": "Mene asetuksiin",
   "message.incorrect-username-password": "Väärä käyttäjänimi/salasana.",
   "message.log.visitor": "Vierailija maasta {country} selaimella {browser} laitteella {os} {device}",
-  "message.new-version-available": "Uusi versio umamista {version} on käytettävissä!",
+  "message.new-version-available": "Uusi versio Bayo.analytics {version} on käytettävissä!",
   "message.no-data-available": "Tietoja ei ole käytettävissä.",
   "message.no-websites-configured": "Sinulla ei ole määritettyjä verkkosivustoja.",
   "message.page-not-found": "Sivua ei löydetty.",

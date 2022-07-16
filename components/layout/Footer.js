@@ -1,16 +1,16 @@
-import React from 'react';
-import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
-import Link from 'components/common/Link';
-import styles from './Footer.module.css';
-import useStore from 'store/version';
-import { HOMEPAGE_URL, VERSION_URL } from 'lib/constants';
+import React from "react";
+import classNames from "classnames";
+import { FormattedMessage } from "react-intl";
+import Link from "components/common/Link";
+import styles from "./Footer.module.css";
+import useStore from "store/version";
+import { HOMEPAGE_URL, MAINPAGE_URL } from "lib/constants";
 
 export default function Footer() {
   const { current } = useStore();
 
   return (
-    <footer className={classNames(styles.footer, 'row')}>
+    <footer className={classNames(styles.footer, "row")}>
       <div className="col-12 col-md-4" />
       <div className="col-12 col-md-4">
         <FormattedMessage
@@ -18,15 +18,15 @@ export default function Footer() {
           defaultMessage="Powered by {name}"
           values={{
             name: (
-              <Link href={HOMEPAGE_URL}>
-                <b>umami</b>
+              <Link href={MAINPAGE_URL}>
+                <b>Bayo.media</b>
               </Link>
             ),
           }}
         />
       </div>
-      <div className={classNames(styles.version, 'col-12 col-md-4')}>
-        <Link href={VERSION_URL}>{`v${current}`}</Link>
+      <div className={classNames(styles.version, "col-12 col-md-4")}>
+        <Link href={HOMEPAGE_URL}>{`v${current}`}</Link>
       </div>
     </footer>
   );

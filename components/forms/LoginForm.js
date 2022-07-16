@@ -1,30 +1,34 @@
-import React, { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Formik, Form, Field } from 'formik';
-import { useRouter } from 'next/router';
-import Button from 'components/common/Button';
+import React, { useState } from "react";
+import { FormattedMessage } from "react-intl";
+import { Formik, Form, Field } from "formik";
+import { useRouter } from "next/router";
+import Button from "components/common/Button";
 import FormLayout, {
   FormButtons,
   FormError,
   FormMessage,
   FormRow,
-} from 'components/layout/FormLayout';
-import Icon from 'components/common/Icon';
-import useApi from 'hooks/useApi';
-import { setItem } from 'lib/web';
-import { AUTH_TOKEN } from 'lib/constants';
-import { setUser } from 'store/app';
-import Logo from 'assets/logo.svg';
-import styles from './LoginForm.module.css';
+} from "components/layout/FormLayout";
+import Icon from "components/common/Icon";
+import useApi from "hooks/useApi";
+import { setItem } from "lib/web";
+import { AUTH_TOKEN } from "lib/constants";
+import { setUser } from "store/app";
+import Logo from "assets/logo.svg";
+import styles from "./LoginForm.module.css";
 
 const validate = ({ username, password }) => {
   const errors = {};
 
   if (!username) {
-    errors.username = <FormattedMessage id="label.required" defaultMessage="Required" />;
+    errors.username = (
+      <FormattedMessage id="label.required" defaultMessage="Required" />
+    );
   }
   if (!password) {
-    errors.password = <FormattedMessage id="label.required" defaultMessage="Required" />;
+    errors.password = (
+      <FormattedMessage id="label.required" defaultMessage="Required" />
+    );
   }
 
   return errors;
@@ -36,7 +40,7 @@ export default function LoginForm() {
   const [message, setMessage] = useState();
 
   const handleSubmit = async ({ username, password }) => {
-    const { ok, status, data } = await post('/auth/login', {
+    const { ok, status, data } = await post("/auth/login", {
       username,
       password,
     });
@@ -46,7 +50,7 @@ export default function LoginForm() {
 
       setUser(data.user);
 
-      await router.push('/');
+      await router.push("/");
 
       return null;
     } else {
@@ -58,7 +62,7 @@ export default function LoginForm() {
           />
         ) : (
           data
-        ),
+        )
       );
     }
   };
@@ -67,8 +71,8 @@ export default function LoginForm() {
     <FormLayout className={styles.login}>
       <Formik
         initialValues={{
-          username: '',
-          password: '',
+          username: "",
+          password: "",
         }}
         validate={validate}
         onSubmit={handleSubmit}
@@ -77,11 +81,14 @@ export default function LoginForm() {
           <Form>
             <div className={styles.header}>
               <Icon icon={<Logo />} size="xlarge" className={styles.icon} />
-              <h1 className="center">umami</h1>
+              <h1 className="center">Bayo.analytics</h1>
             </div>
             <FormRow>
               <label htmlFor="username">
-                <FormattedMessage id="label.username" defaultMessage="Username" />
+                <FormattedMessage
+                  id="label.username"
+                  defaultMessage="Username"
+                />
               </label>
               <div>
                 <Field name="username" type="text" />
@@ -90,7 +97,10 @@ export default function LoginForm() {
             </FormRow>
             <FormRow>
               <label htmlFor="password">
-                <FormattedMessage id="label.password" defaultMessage="Password" />
+                <FormattedMessage
+                  id="label.password"
+                  defaultMessage="Password"
+                />
               </label>
               <div>
                 <Field name="password" type="password" />

@@ -1,11 +1,12 @@
-import { useState, useEffect, useCallback } from 'react';
-import { FormattedMessage } from 'react-intl';
-import ButtonLayout from 'components/layout/ButtonLayout';
-import useStore, { checkVersion } from 'store/version';
-import { setItem } from 'lib/web';
-import { VERSION_CHECK, VERSION_URL } from 'lib/constants';
-import Button from './Button';
-import styles from './UpdateNotice.module.css';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect, useCallback } from "react";
+import { FormattedMessage } from "react-intl";
+import ButtonLayout from "components/layout/ButtonLayout";
+import useStore, { checkVersion } from "store/version";
+import { setItem } from "lib/web";
+import { VERSION_CHECK, VERSION_URL } from "lib/constants";
+import Button from "./Button";
+import styles from "./UpdateNotice.module.css";
 
 export default function UpdateNotice() {
   const { latest, checked, hasUpdate } = useStore();
@@ -41,13 +42,16 @@ export default function UpdateNotice() {
       <div className={styles.message}>
         <FormattedMessage
           id="message.new-version-available"
-          defaultMessage="A new version of umami {version} is available!"
+          defaultMessage="A new version of Bayo.analytics {version} is available!"
           values={{ version: `v${latest}` }}
         />
       </div>
       <ButtonLayout className={styles.buttons}>
         <Button size="xsmall" variant="action" onClick={handleViewClick}>
-          <FormattedMessage id="label.view-details" defaultMessage="View details" />
+          <FormattedMessage
+            id="label.view-details"
+            defaultMessage="View details"
+          />
         </Button>
         <Button size="xsmall" onClick={handleDismissClick}>
           <FormattedMessage id="label.dismiss" defaultMessage="Dismiss" />

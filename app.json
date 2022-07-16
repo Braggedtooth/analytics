@@ -1,9 +1,9 @@
 {
-  "name": "Umami",
-  "description": "Umami is a simple, fast, website analytics alternative to Google Analytics.",
+  "name": "Bayo.analytics",
+  "description": "Bayo.analytics är en  integritetsvänlig webbapplikation som visa dig användarstatistik för din webbplats. Statistiken är en samling av information som du kan använda för att analysera din webbplats och dina användare.den samlar in data på ett säkert sätt utan att samla in",
   "keywords": ["analytics", "charts", "statistics", "web-analytics"],
-  "website": "https://umami.is",
-  "repository": "https://github.com/mikecao/umami",
+  "website": "https://analytics.bayo.se",
+  "repository": "https://analytics.bayo.se",
   "addons": ["heroku-postgresql"],
   "env": {
     "HASH_SALT": {
