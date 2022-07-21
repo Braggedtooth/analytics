@@ -18,7 +18,10 @@ export default function useFetch(url, options = {}, update = []) {
 
       const { data, status, ok } = await get(url, params, headers);
 
-      await saveQuery(url, { time: performance.now() - time, completed: Date.now() });
+      await saveQuery(url, {
+        time: performance.now() - time,
+        completed: Date.now(),
+      });
 
       if (status >= 400) {
         setError(data);

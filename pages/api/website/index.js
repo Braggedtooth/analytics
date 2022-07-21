@@ -26,15 +26,21 @@ export default async (req, res) => {
       } else {
         share_id = null;
       }
-
       await updateWebsite(website_id, { name, domain, share_id });
 
       return ok(res);
     } else {
       const website_uuid = uuid();
       const share_id = enable_share_url ? getRandomChars(8) : null;
-      const website = await createWebsite(user_id, { website_uuid, name, domain, share_id });
-
+      const website = await createWebsite(user_id, {
+        website_uuid,
+        name,
+        domain,
+        share_id,
+      });
+      if (!is_admin) {
+        return unauthorized(res);
+      }
       return ok(res, website);
     }
   }

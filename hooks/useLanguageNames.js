@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { get } from 'lib/web';
-import enUS from 'public/intl/language/en-US.json';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { get } from "lib/web";
+import svSe from "public/intl/language/sv-SE.json";
 
 const languageNames = {
-  'en-US': enUS,
+  "sv-SE": svSe,
 };
 
 export default function useLanguageNames(locale) {
-  const [list, setList] = useState(languageNames[locale] || enUS);
+  const [list, setList] = useState(languageNames[locale] || svSe);
   const { basePath } = useRouter();
 
   async function loadData(locale) {
@@ -18,7 +19,7 @@ export default function useLanguageNames(locale) {
       languageNames[locale] = data;
       setList(languageNames[locale]);
     } else {
-      setList(enUS);
+      setList(svSe);
     }
   }
 

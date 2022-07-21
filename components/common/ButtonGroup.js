@@ -12,7 +12,9 @@ function ButtonGroup({ items = [], selectedItem, className, size, icon, onClick 
         return (
           <Button
             key={value}
-            className={classNames(styles.button, { [styles.selected]: selectedItem === value })}
+            className={classNames(styles.button, {
+              [styles.selected]: selectedItem === value,
+            })}
             size={size}
             icon={icon}
             onClick={() => onClick(value)}

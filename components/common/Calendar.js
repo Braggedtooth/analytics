@@ -57,7 +57,9 @@ export default function Calendar({ date, minDate, maxDate, onChange }) {
       <div className={styles.header}>
         <div>{date.getDate()}</div>
         <div
-          className={classNames(styles.selector, { [styles.open]: selectMonth })}
+          className={classNames(styles.selector, {
+            [styles.open]: selectMonth,
+          })}
           onClick={toggleMonthSelect}
         >
           {month}

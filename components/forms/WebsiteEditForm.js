@@ -52,7 +52,11 @@ export default function WebsiteEditForm({ values, onSave, onClose }) {
   return (
     <FormLayout>
       <Formik
-        initialValues={{ ...initialValues, ...values, enable_share_url: !!values?.share_id }}
+        initialValues={{
+          ...initialValues,
+          ...values,
+          enable_share_url: !!values?.share_id,
+        }}
         validate={validate}
         onSubmit={handleSubmit}
       >

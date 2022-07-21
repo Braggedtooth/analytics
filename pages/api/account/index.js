@@ -48,7 +48,10 @@ export default async (req, res) => {
         return badRequest(res, 'Account already exists');
       }
 
-      const created = await createAccount({ username, password: hashPassword(password) });
+      const created = await createAccount({
+        username,
+        password: hashPassword(password),
+      });
 
       return ok(res, created);
     }

@@ -7,7 +7,10 @@ import styles from './LanguageButton.module.css';
 
 export default function LanguageButton() {
   const { locale, saveLocale } = useLocale();
-  const menuOptions = Object.keys(languages).map(key => ({ ...languages[key], value: key }));
+  const menuOptions = Object.keys(languages).map(key => ({
+    ...languages[key],
+    value: key,
+  }));
 
   function handleSelect(value) {
     saveLocale(value);

@@ -14,7 +14,7 @@
   "label.add-website": [
     {
       "type": 0,
-      "value": "Lägg till webbsajt"
+      "value": "Lägg till Hemsida"
     }
   ],
   "label.administrator": [
@@ -122,7 +122,7 @@
   "label.delete-website": [
     {
       "type": 0,
-      "value": "Radera webbsajt"
+      "value": "Radera Hemsidan"
     }
   ],
   "label.dismiss": [
@@ -152,7 +152,7 @@
   "label.edit-website": [
     {
       "type": 0,
-      "value": "Redigera webbsajt"
+      "value": "Redigera Hemsidan"
     }
   ],
   "label.enable-share-url": [
@@ -400,7 +400,7 @@
   "label.websites": [
     {
       "type": 0,
-      "value": "Webbsajt"
+      "value": "Hemsidor"
     }
   ],
   "message.active-users": [
@@ -548,7 +548,7 @@
   "message.new-version-available": [
     {
       "type": 0,
-      "value": "En ny version av umami "
+      "value": "En ny utgåva av Bayo.analytics "
     },
     {
       "type": 1,
@@ -568,7 +568,13 @@
   "message.no-websites-configured": [
     {
       "type": 0,
-      "value": "Du har inga webbsajter."
+      "value": "Du har inga Hemsidor."
+    }
+  ],
+  "message.not-admin": [
+    {
+      "type": 0,
+      "value": "Du har inte tillgång till denna funktionen, Kontakta me@bayo.se för mer information."
     }
   ],
   "message.page-not-found": [
@@ -590,7 +596,7 @@
   "message.reset-warning": [
     {
       "type": 0,
-      "value": "All statistik för webbsajten tas bort men spårningskoden förblir oförändrad."
+      "value": "All statistik för Hemsidan tas bort men spårningskoden förblir oförändrad."
     }
   ],
   "message.save-success": [
@@ -638,7 +644,7 @@
     },
     {
       "type": 0,
-      "value": "-avsnittet på din webbsajt."
+      "value": "-avsnittet på din Hemsida."
     }
   ],
   "message.type-delete": [
