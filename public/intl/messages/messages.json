@@ -250,7 +250,7 @@
   "label.none": [
     {
       "type": 0,
-      "value": "None"
+      "value": "Geen"
     }
   ],
   "label.owner": [
@@ -592,7 +592,7 @@
   "message.reset-warning": [
     {
       "type": 0,
-      "value": "All statistics for this website will be deleted, but your tracking code will remain intact."
+      "value": "Alle bijhorende statistieken van deze website worden verwijderd, maar jouw volgcode blijft gelden."
     }
   ],
   "message.save-success": [
@@ -740,7 +740,7 @@
   "metrics.filter.combined": [
     {
       "type": 0,
-      "value": "Combined"
+      "value": "Gecombineerd"
     }
   ],
   "metrics.filter.raw": [
@@ -782,13 +782,49 @@
   "metrics.screens": [
     {
       "type": 0,
-      "value": "Screens"
+      "value": "Schermen"
     }
   ],
   "metrics.unique-visitors": [
     {
       "type": 0,
       "value": "Unique visitors"
+    }
+  ],
+  "metrics.utm": [
+    {
+      "type": 0,
+      "value": "UTM"
+    }
+  ],
+  "metrics.utm_campaign": [
+    {
+      "type": 0,
+      "value": "UTM Campaign"
+    }
+  ],
+  "metrics.utm_content": [
+    {
+      "type": 0,
+      "value": "UTM Content"
+    }
+  ],
+  "metrics.utm_medium": [
+    {
+      "type": 0,
+      "value": "UTM Medium"
+    }
+  ],
+  "metrics.utm_source": [
+    {
+      "type": 0,
+      "value": "UTM Source"
+    }
+  ],
+  "metrics.utm_term": [
+    {
+      "type": 0,
+      "value": "UTM Term"
     }
   ],
   "metrics.views": [
