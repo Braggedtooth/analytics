@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
-import classNames from 'classnames';
-import Link from 'components/common/Link';
-import Table from 'components/common/Table';
-import Button from 'components/common/Button';
-import OverflowText from 'components/common/OverflowText';
-import PageHeader from 'components/layout/PageHeader';
-import Modal from 'components/common/Modal';
-import WebsiteEditForm from 'components/forms/WebsiteEditForm';
-import ResetForm from 'components/forms/ResetForm';
-import DeleteForm from 'components/forms/DeleteForm';
-import TrackingCodeForm from 'components/forms/TrackingCodeForm';
-import ShareUrlForm from 'components/forms/ShareUrlForm';
-import EmptyPlaceholder from 'components/common/EmptyPlaceholder';
-import ButtonLayout from 'components/layout/ButtonLayout';
-import Toast from 'components/common/Toast';
-import Favicon from 'components/common/Favicon';
-import Pen from 'assets/pen.svg';
-import Trash from 'assets/trash.svg';
-import Reset from 'assets/redo.svg';
-import Plus from 'assets/plus.svg';
-import Cancel from 'assets/xmark.svg';
 import Code from 'assets/code.svg';
 import LinkIcon from 'assets/link.svg';
+import Pen from 'assets/pen.svg';
+import Plus from 'assets/plus.svg';
+import Reset from 'assets/redo.svg';
+import Trash from 'assets/trash.svg';
+import Cancel from 'assets/xmark.svg';
+import classNames from 'classnames';
+import Button from 'components/common/Button';
+import EmptyPlaceholder from 'components/common/EmptyPlaceholder';
+import Favicon from 'components/common/Favicon';
+import Link from 'components/common/Link';
+import Modal from 'components/common/Modal';
+import OverflowText from 'components/common/OverflowText';
+import Table from 'components/common/Table';
+import Toast from 'components/common/Toast';
+import DeleteForm from 'components/forms/DeleteForm';
+import ResetForm from 'components/forms/ResetForm';
+import ShareUrlForm from 'components/forms/ShareUrlForm';
+import TrackingCodeForm from 'components/forms/TrackingCodeForm';
+import WebsiteEditForm from 'components/forms/WebsiteEditForm';
+import ButtonLayout from 'components/layout/ButtonLayout';
+import PageHeader from 'components/layout/PageHeader';
 import useFetch from 'hooks/useFetch';
 import useUser from 'hooks/useUser';
+import { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import styles from './WebsiteSettings.module.css';
 
 export default function WebsiteSettings() {
@@ -37,6 +37,7 @@ export default function WebsiteSettings() {
   const [showUrl, setShowUrl] = useState();
   const [saved, setSaved] = useState(0);
   const [message, setMessage] = useState();
+
   const { data } = useFetch('/websites', { params: { include_all: !!user?.is_admin } }, [saved]);
 
   const Buttons = row => (
@@ -183,7 +184,7 @@ export default function WebsiteSettings() {
     <>
       <FormattedMessage
         id="message.not-admin"
-        defaultMessage="You do not have acess to that.Contact me@bayo for more information."
+        defaultMessage="You do not have acess to that.Contact adebayo.ajayi@viabay.se for more information."
       />
       <Button icon={<Cancel />} size="small" onClick={() => setAddWebsite(false)}>
         <FormattedMessage id="label.cancel" defaultMessage="Cancel" />

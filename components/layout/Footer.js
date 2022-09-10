@@ -1,13 +1,13 @@
-import React from 'react';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
 import Link from 'components/common/Link';
-import styles from './Footer.module.css';
-import useStore from 'store/version';
 import { MAINPAGE_URL } from 'lib/constants';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { FormattedMessage } from 'react-intl';
+import styles from './Footer.module.css';
 
 export default function Footer() {
-  const { current } = useStore();
+  const { pathname } = useRouter();
 
   return (
     <footer className={classNames(styles.footer, 'row')}>
@@ -19,16 +19,14 @@ export default function Footer() {
           values={{
             name: (
               <Link href={MAINPAGE_URL}>
-                <b>Bayo.media</b>
+                <b>Viabay Analytics</b>
               </Link>
             ),
           }}
         />
       </div>
-      <div className={classNames(styles.version, 'col-12 col-md-4')}>{`v${current}`}</div>
-      {!process.env.telemetryDisabled && (
-        <img src={`https://i.umami.is/a.png?v=${current}`} alt="" />
-      )}
+
+      {!pathname.includes('/share/') && <Script src={`/telemetry.js`} />}
     </footer>
   );
 }

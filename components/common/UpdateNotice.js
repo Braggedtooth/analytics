@@ -1,9 +1,9 @@
-import { useState, useEffect, useCallback } from 'react';
-import { FormattedMessage } from 'react-intl';
 import ButtonLayout from 'components/layout/ButtonLayout';
-import useStore, { checkVersion } from 'store/version';
-import { setItem } from 'lib/web';
 import { REPO_URL, VERSION_CHECK } from 'lib/constants';
+import { setItem } from 'lib/web';
+import { useCallback, useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
+import useStore, { checkVersion } from 'store/version';
 import Button from './Button';
 import styles from './UpdateNotice.module.css';
 
@@ -30,7 +30,7 @@ export default function UpdateNotice() {
     if (!checked) {
       checkVersion();
     }
-  }, []);
+  }, [checked]);
 
   if (!hasUpdate || dismissed) {
     return null;
@@ -41,16 +41,13 @@ export default function UpdateNotice() {
       <div className={styles.message}>
         <FormattedMessage
           id="message.new-version-available"
-          defaultMessage="A new version of Bayo.analytics {version} is available!"
+          defaultMessage="A new version of Viabay Analytics {version} is available!"
           values={{ version: `v${latest}` }}
         />
       </div>
       <ButtonLayout className={styles.buttons}>
         <Button size="xsmall" variant="action" onClick={handleViewClick}>
-          <FormattedMessage
-            id="label.view-details"
-            defaultMessage="View details"
-          />
+          <FormattedMessage id="label.view-details" defaultMessage="View details" />
         </Button>
         <Button size="xsmall" onClick={handleDismissClick}>
           <FormattedMessage id="label.dismiss" defaultMessage="Dismiss" />

@@ -29,12 +29,6 @@
       "value": "All"
     }
   ],
-  "label.all-events": [
-    {
-      "type": 0,
-      "value": "All events"
-    }
-  ],
   "label.all-time": [
     {
       "type": 0,
@@ -474,7 +468,13 @@
   "message.delete-warning": [
     {
       "type": 0,
-      "value": "All associated data will be deleted as well."
+      "value": "Alle verwante gegezens zullen ook verwijderd worden."
+    }
+  ],
+  "message.edit-dashboard": [
+    {
+      "type": 0,
+      "value": "Edit dashboard"
     }
   ],
   "message.failure": [
@@ -544,7 +544,7 @@
   "message.new-version-available": [
     {
       "type": 0,
-      "value": "A new version of Bayo.analytics "
+      "value": "A new version of Viabay Analytics "
     },
     {
       "type": 1,
@@ -570,7 +570,7 @@
   "message.not-admin": [
     {
       "type": 0,
-      "value": "You do not have acess to that.Contact me@bayo for more information."
+      "value": "You do not have acess to that.Contact adebayo.ajayi@viabay.se for more information."
     }
   ],
   "message.page-not-found": [
@@ -770,7 +770,13 @@
   "metrics.pages": [
     {
       "type": 0,
-      "value": "Pages"
+      "value": "Pagina's"
+    }
+  ],
+  "metrics.query-parameters": [
+    {
+      "type": 0,
+      "value": "Query parameters"
     }
   ],
   "metrics.referrers": [
@@ -788,43 +794,7 @@
   "metrics.unique-visitors": [
     {
       "type": 0,
-      "value": "Unique visitors"
-    }
-  ],
-  "metrics.utm": [
-    {
-      "type": 0,
-      "value": "UTM"
-    }
-  ],
-  "metrics.utm_campaign": [
-    {
-      "type": 0,
-      "value": "UTM Campaign"
-    }
-  ],
-  "metrics.utm_content": [
-    {
-      "type": 0,
-      "value": "UTM Content"
-    }
-  ],
-  "metrics.utm_medium": [
-    {
-      "type": 0,
-      "value": "UTM Medium"
-    }
-  ],
-  "metrics.utm_source": [
-    {
-      "type": 0,
-      "value": "UTM Source"
-    }
-  ],
-  "metrics.utm_term": [
-    {
-      "type": 0,
-      "value": "UTM Term"
+      "value": "Unieke bezoekers"
     }
   ],
   "metrics.views": [
